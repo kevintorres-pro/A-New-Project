@@ -1,17 +1,19 @@
 ---
+//Components Import
+import Head from "./Head.astro";
+
+//CSS Import
 import "../styles/global.css";
+
+const { title = "Sitio Web", description = "Description" } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <title>Astro Basics</title>
-  </head>
+  <Head {title} {description} />
   <body>
-    <slot />
+    <main>
+      <slot />
+    </main>
   </body>
 </html>
