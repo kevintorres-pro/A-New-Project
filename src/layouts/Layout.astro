@@ -1,6 +1,7 @@
 ---
 //Components Import
 import Head from "./Head.astro";
+import Header from "../components/navigation/Header.astro";
 
 //CSS Import
 import "../styles/global.css";
@@ -12,6 +13,7 @@ const { title = "Sitio Web", description = "Description" } = Astro.props;
 <html lang="es">
   <Head {title} {description} />
   <body>
+    <Header />
     <main>
       <slot />
     </main>
