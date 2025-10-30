@@ -1,0 +1,19 @@
+---
+import menuLinks from "../../data/menu";
+---
+
+<ul
+  class="fixed lg:static flex flex-col lg:flex-row justify-center items-center gap-7 bg-white
+  inset-0 z-40 translate-x-full lg:translate-x-0
+  transition-transform duration-500 ease-in-out"
+  aria-hidden="true"
+  id="mobile-menu"
+>
+  {
+    menuLinks.map((menu) => (
+      <a href={menu.link} class="text-2xl lg:text-xl hover:underline">
+        {menu.name}
+      </a>
+    ))
+  }
+</ul>
