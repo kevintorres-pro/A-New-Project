@@ -1,1 +1,15 @@
-<nav></nav>
+---
+import OtherButton from "../buttons/OtherButton.astro";
+import Hamburger from "./Hamburger.astro";
+import Links from "./Links.astro";
+---
+
+<nav class="flex lg:flex-row-reverse items-center gap-6">
+  <OtherButton link="#" text="Ver Oferta" />
+  <Hamburger />
+  <Links />
+</nav>
+
+<script>
+  import "../../scripts/menu.js";
+</script>
